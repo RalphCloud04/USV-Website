@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>USV Monitoring Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="header-left">
+
+            <!-- HAMBURGER MENU -->
+            <div class="menu-btn" id="menuBtn">
+
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+
+            </div>
+
+
+            <!-- WEBSITE TITLE -->
+            <div class="title">
+
+                <h1>Malabon Lake</h1>
+
+                <p>
+                    Unmanned Surface Vehicle Monitoring
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SYSTEM CONNECTION STATUS -->
+        <div class="online-status">
+
+            <span class="status-dot"></span>
+
+            <span>System Online</span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- SIDEBAR MENU -->
+
+    <nav class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <h2>USV Monitoring</h2>
+
+        </div>
+
+
+        <div class="menu-items">
+
+            <!-- DASHBOARD -->
+            <button
+                class="nav-item active"
+                data-page="dashboardPage">
+
+                Dashboard
+
+            </button>
+
+
+            <!-- ABOUT -->
+            <button
+                class="nav-item"
+                data-page="aboutPage">
+
+                About
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- DARK BACKGROUND WHEN MENU IS OPEN -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay">
+    </div>
+
+
+    <!-- DASHBOARD PAGE -->
+
+    <main
+        class="dashboard page active-page"
+        id="dashboardPage">
+
+
+        <!-- 1. SYSTEM STATUS -->
+
+        <section
+            class="card"
+            id="system-status">
+
+
+            <div class="card-title">
+
+                <h2>System Status</h2>
+
+                <button class="expand-btn">
+                    ⛶
+                </button>
+
+            </div>
+
+
+
+            <!-- CONTAINER LOAD -->
+
+            <p>Container Load</p>
+
+
+            <div class="progress-bar">
+
+                <div class="container-load">
+
+                    50%
+
+                </div>
+
+            </div>
+
+
+            <!-- BATTERY -->
+
+            <p>Battery Life</p>
+
+
+            <div class="progress-bar">
+
+                <div class="battery-life">
+
+                    80%
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- 2. LIVE FEED -->
+
+        <section
+            class="card"
+            id="live-feed">
+
+
+            <div class="card-title">
+
+                <h2>Live Feed</h2>
+
+                <button class="expand-btn">
+                    ⛶
+                </button>
+
+            </div>
+
+
+
+            <div class="camera">
+
+
+                <button class="play-button">
+
+                    ▶
+
+                </button>
+
+
+                <p>
+                    USV Camera Feed
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- 3. WASTE REPORT -->
+
+        <section
+            class="card"
+            id="waste-report">
+
+
+            <div class="card-title">
+
+                <h2>Waste Composition</h2>
+
+                <button class="expand-btn">
+                    ⛶
+                </button>
+
+            </div>
+
+
+
+            <div class="reports">
+
+
+                <!-- DAILY REPORT -->
+
+                <div>
+
+                    <h3>
+                        Daily Report
+                    </h3>
+
+
+                    <div class="chart-placeholder">
+
+                        Daily Chart
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MONTHLY REPORT -->
+
+                <div>
+
+                    <h3>
+                        Monthly Report
+                    </h3>
+
+
+                    <div class="chart-placeholder">
+
+                        Monthly Chart
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- WASTE TYPE -->
+
+            <h3>
+                Waste Type
+            </h3>
+
+
+            <div class="pie-placeholder">
+
+                Waste Composition
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- 4. GPS LOCATION -->
+
+        <section
+            class="card"
+            id="gps">
+
+
+            <div class="card-title">
+
+                <h2>GPS Location</h2>
+
+                <button class="expand-btn">
+                    ⛶
+                </button>
+
+            </div>
+
+
+
+            <!-- MAP -->
+
+            <div class="map">
+
+                <span>
+                    USV LOCATION
+                </span>
+
+            </div>
+
+
+
+            <!-- COORDINATES -->
+
+            <div class="coordinates">
+
+
+                <p>
+
+                    Latitude:
+
+                    <strong>
+                        14.6627° N
+                    </strong>
+
+                </p>
+
+
+
+                <p>
+
+                    Longitude:
+
+                    <strong>
+                        120.9567° E
+                    </strong>
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ABOUT PAGE -->
+
+    <main
+        class="about-page page"
+        id="aboutPage">
+
+
+        <section class="about-container">
+
+
+            <!-- BACK BUTTON -->
+
+            <button
+                class="back-btn"
+                id="backToDashboard">
+
+                ← Back to Dashboard
+
+            </button>
+
+
+
+            <!-- ABOUT TITLE -->
+
+            <h1>
+                About the Project
+            </h1>
+
+
+            <p>
+
+                blah blah blah
+
+            </p>
+
+
+
+            <!-- PURPOSE -->
+
+            <div class="about-card">
+
+
+                <h2>
+                    Project Purpose
+                </h2>
+
+
+                <p>
+
+                    the system blah blah blah
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- MONITORING FEATURES -->
+
+            <div class="about-card">
+
+
+                <h2>
+                    Monitoring Features
+                </h2>
+
+
+                <p>
+
+                    blah blah blah
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- SYSTEM INFORMATION -->
+
+            <div class="about-card">
+
+
+                <h2>
+                    System Information
+                </h2>
+
+
+                <p>
+
+                    blah blah blah blalh
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
