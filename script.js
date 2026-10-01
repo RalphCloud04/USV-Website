@@ -250,3 +250,58 @@ function updateSystemStatus() {
 
 
 updateSystemStatus();
+
+
+// WATER QUALITY
+
+const temperatureElement =
+    document.getElementById("temperature");
+
+const tdsElement =
+    document.getElementById("tds");
+
+const phElement =
+    document.getElementById("ph");
+
+
+// UPDATE WATER QUALITY VALUES
+
+function updateWaterQuality(
+    temperature,
+    tds,
+    ph
+) {
+
+    if (temperatureElement) {
+
+        temperatureElement.textContent =
+            `${temperature} °C`;
+
+    }
+
+
+    if (tdsElement) {
+
+        tdsElement.textContent =
+            `${tds} ppm`;
+
+    }
+
+
+    if (phElement) {
+
+        phElement.textContent =
+            ph;
+
+    }
+
+}
+
+
+// INITIAL DEMO VALUES
+
+updateWaterQuality(
+    28.5,
+    320,
+    7.2
+);
