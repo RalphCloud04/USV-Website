@@ -2,1007 +2,922 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>USV Monitoring Dashboard</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+        rel="stylesheet"
+        href="style.css">
 
+</head>
 
 <body>
 
 
-    <!-- HEADER -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <header>
+<header>
 
-        <div class="header-left">
+    <div class="header-left">
 
-            <!-- HAMBURGER MENU -->
-            <div class="menu-btn" id="menuBtn">
+        <div class="menu-btn" id="menuBtn">
 
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-
-            </div>
-
-
-            <!-- WEBSITE TITLE -->
-            <div class="title">
-
-                <h1>Malabon Lake</h1>
-
-                <p>
-                    Unmanned Surface Vehicle Monitoring
-                </p>
-
-            </div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
 
         </div>
 
+        <div class="title">
 
-        <!-- SYSTEM CONNECTION STATUS -->
-        <div class="online-status">
+            <h1>Malabon Lake</h1>
 
-            <span class="status-dot"></span>
-
-            <span>System Online</span>
+            <p>Unmanned Surface Vehicle Monitoring</p>
 
         </div>
 
-    </header>
-
-
-
-    <!-- SIDEBAR MENU -->
-
-    <nav class="sidebar" id="sidebar">
-
-        <div class="sidebar-header">
-
-            <h2>USV Monitoring</h2>
-
-        </div>
-
-
-        <div class="menu-items">
-
-            <!-- DASHBOARD -->
-            <button
-                class="nav-item active"
-                data-page="dashboardPage">
-
-                Dashboard
-
-            </button>
-
-
-            <!-- ABOUT -->
-            <button
-                class="nav-item"
-                data-page="aboutPage">
-
-                About
-
-            </button>
-
-        </div>
-
-    </nav>
-
-
-    <!-- DARK BACKGROUND WHEN MENU IS OPEN -->
-
-    <div
-        class="sidebar-overlay"
-        id="sidebarOverlay">
     </div>
 
 
-    <!-- DASHBOARD PAGE -->
+    <div class="online-status">
 
-    <main
-        class="dashboard page active-page"
-        id="dashboardPage">
+        <span class="status-dot"></span>
 
+        <span>System Online</span>
 
-        <!-- SYSTEM STATUS -->
+    </div>
 
-        <section
-            class="card"
-            id="system-status">
+</header>
 
 
-            <div class="card-title">
 
-                <h2>System Status</h2>
+<!-- =========================================================
+     SIDEBAR
+========================================================= -->
 
-                <button class="expand-btn">
-                    ⛶
-                </button>
+<aside
+    class="sidebar"
+    id="sidebar">
 
-            </div>
+    <div class="sidebar-header">
 
+        <h2>USV Monitoring</h2>
 
+    </div>
 
-            <!-- CONTAINER LOAD -->
 
-            <p>Container Load</p>
+    <div class="menu-items">
 
+        <button
+            class="nav-item active"
+            data-page="dashboardPage">
 
-            <div class="progress-bar">
+            Dashboard
 
-                <div class="container-load">
+        </button>
 
-                    50%
 
-                </div>
+        <button
+            class="nav-item"
+            data-page="aboutPage">
 
-            </div>
+            About
 
+        </button>
 
-            <!-- BATTERY -->
+    </div>
 
-            <p>Battery Life</p>
+</aside>
 
 
-            <div class="progress-bar">
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay">
+</div>
 
-                <div class="battery-life">
 
-                    80%
 
-                </div>
+<!-- =========================================================
+     DASHBOARD PAGE
+========================================================= -->
 
-            </div>
+<main
+    class="page dashboard active-page"
+    id="dashboardPage">
 
 
-        </section>
+    <!-- =====================================================
+         1. SYSTEM STATUS
+    ====================================================== -->
 
+    <section
+        class="card"
+        id="system-status">
 
-        <!-- 2. LIVE FEED -->
+        <div class="card-title">
 
-        <section
-            class="card"
-            id="live-feed">
+            <h2>System Status</h2>
 
-
-            <div class="card-title">
-
-                <h2>Live Feed</h2>
-
-                <button class="expand-btn">
-                    ⛶
-                </button>
-
-            </div>
-
-
-
-            <div class="camera">
-
-
-                <button class="play-button">
-
-                    ▶
-
-                </button>
-
-
-                <p>
-                    USV Camera Feed
-                </p>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- WASTE REPORT -->
-
-        <section
-            class="card"
-            id="waste-report">
-
-
-            <div class="card-title">
-
-                <h2>Waste Composition</h2>
-
-                <button class="expand-btn">
-                    ⛶
-                </button>
-
-            </div>
-
-
-
-            <div class="reports">
-
-
-                <!-- DAILY REPORT -->
-
-                <div>
-
-                    <h3>
-                        Daily Report
-                    </h3>
-
-
-                    <div class="chart-placeholder">
-
-                        Daily Chart
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- MONTHLY REPORT -->
-
-                <div>
-
-                    <h3>
-                        Monthly Report
-                    </h3>
-
-
-                    <div class="chart-placeholder">
-
-                        Monthly Chart
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- WASTE TYPE -->
-
-            <h3>
-                Waste Type
-            </h3>
-
-
-            <div class="pie-placeholder">
-
-                Waste Composition
-
-            </div>
-
-
-        </section>
-
-
-        <!-- GPS LOCATION -->
-
-        <section
-            class="card"
-            id="gps">
-
-
-            <div class="card-title">
-
-                <h2>GPS Location</h2>
-
-                <button class="expand-btn">
-                    ⛶
-                </button>
-
-            </div>
-
-
-
-            <!-- MAP -->
-
-            <div class="map">
-
-                <span>
-                    USV LOCATION
-                </span>
-
-            </div>
-
-
-
-            <!-- COORDINATES -->
-
-            <div class="coordinates">
-
-
-                <p>
-
-                    Latitude:
-
-                    <strong>
-                        14.6627° N
-                    </strong>
-
-                </p>
-
-
-
-                <p>
-
-                    Longitude:
-
-                    <strong>
-                        120.9567° E
-                    </strong>
-
-                </p>
-
-
-            </div>
-
-
-        </section>
-
-
-    </main>
-            
-            <!-- WATER QUALITY -->
-
-        <section
-            class="card water-quality"
-            id="water-quality">
-
-
-            <div class="card-title">
-
-                <h2>Water Quality</h2>
-
-                <button class="expand-btn">
-                    ⛶
-                </button>
-
-            </div>
-
-
-            <!-- CURRENT WATER READINGS -->
-
-            <div class="water-readings">
-
-
-                <!-- TEMPERATURE -->
-
-                <div class="water-reading">
-
-                    <h3>
-                       Water Temperature
-                    </h3>
-
-                    <div
-                        class="water-value"
-                        id="temperature">
-
-                        28.5 °C
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- TDS -->
-
-                <div class="water-reading">
-
-                    <h3>
-                        Total Dissolved Solids (TDS)
-                    </h3>
-
-                    <div
-                        class="water-value"
-                        id="tds">
-
-                        320 ppm
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- PH -->
-
-                <div class="water-reading">
-
-                    <h3>
-                        pH Level
-                    </h3>
-
-                    <div
-                        class="water-value"
-                        id="ph">
-
-                        7.2
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- LINE GRAPHS -->
-
-            <div class="water-graphs">
-
-
-                <!-- TEMPERATURE GRAPH -->
-
-                <div class="water-graph-card">
-
-                    <div class="graph-header">
-
-                        <h3>
-                            Temperature
-                        </h3>
-
-                        <span>
-                            °C
-                        </span>
-
-                    </div>
-
-
-                    <div class="line-chart">
-
-                        <svg
-                            viewBox="0 0 600 200"
-                            preserveAspectRatio="none"
-                            aria-label="Temperature line graph">
-
-
-                            <!-- GRID -->
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="35"
-                                x2="580"
-                                y2="35" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="75"
-                                x2="580"
-                                y2="75" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="115"
-                                x2="580"
-                                y2="115" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="155"
-                                x2="580"
-                                y2="155" />
-
-
-                            <!-- AXES -->
-
-                            <line
-                                class="graph-axis"
-                                x1="45"
-                                y1="20"
-                                x2="45"
-                                y2="165" />
-
-                            <line
-                                class="graph-axis"
-                                x1="45"
-                                y1="165"
-                                x2="580"
-                                y2="165" />
-
-
-                            <!-- LINE -->
-
-                            <polyline
-                                class="temperature-line"
-                                points="
-                                    55,125
-                                    160,105
-                                    265,118
-                                    370,82
-                                    475,95
-                                    570,65
-                                " />
-
-
-                            <!-- POINTS -->
-
-                            <circle
-                                class="temperature-point"
-                                cx="55"
-                                cy="125"
-                                r="4" />
-
-                            <circle
-                                class="temperature-point"
-                                cx="160"
-                                cy="105"
-                                r="4" />
-
-                            <circle
-                                class="temperature-point"
-                                cx="265"
-                                cy="118"
-                                r="4" />
-
-                            <circle
-                                class="temperature-point"
-                                cx="370"
-                                cy="82"
-                                r="4" />
-
-                            <circle
-                                class="temperature-point"
-                                cx="475"
-                                cy="95"
-                                r="4" />
-
-                            <circle
-                                class="temperature-point"
-                                cx="570"
-                                cy="65"
-                                r="4" />
-
-                        </svg>
-
-
-                        <div class="graph-labels">
-
-                            <span>8 AM</span>
-
-                            <span>10 AM</span>
-
-                            <span>12 PM</span>
-
-                            <span>2 PM</span>
-
-                            <span>4 PM</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- TDS GRAPH -->
-
-                <div class="water-graph-card">
-
-                    <div class="graph-header">
-
-                        <h3>
-                            TDS
-                        </h3>
-
-                        <span>
-                            ppm
-                        </span>
-
-                    </div>
-
-
-                    <div class="line-chart">
-
-                        <svg
-                            viewBox="0 0 600 200"
-                            preserveAspectRatio="none"
-                            aria-label="TDS line graph">
-
-
-                            <!-- GRID -->
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="35"
-                                x2="580"
-                                y2="35" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="75"
-                                x2="580"
-                                y2="75" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="115"
-                                x2="580"
-                                y2="115" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="155"
-                                x2="580"
-                                y2="155" />
-
-
-                            <!-- AXES -->
-
-                            <line
-                                class="graph-axis"
-                                x1="45"
-                                y1="20"
-                                x2="45"
-                                y2="165" />
-
-                            <line
-                                class="graph-axis"
-                                x1="45"
-                                y1="165"
-                                x2="580"
-                                y2="165" />
-
-
-                            <!-- LINE -->
-
-                            <polyline
-                                class="tds-line"
-                                points="
-                                    55,135
-                                    160,120
-                                    265,130
-                                    370,105
-                                    475,112
-                                    570,90
-                                " />
-
-
-                            <!-- POINTS -->
-
-                            <circle
-                                class="tds-point"
-                                cx="55"
-                                cy="135"
-                                r="4" />
-
-                            <circle
-                                class="tds-point"
-                                cx="160"
-                                cy="120"
-                                r="4" />
-
-                            <circle
-                                class="tds-point"
-                                cx="265"
-                                cy="130"
-                                r="4" />
-
-                            <circle
-                                class="tds-point"
-                                cx="370"
-                                cy="105"
-                                r="4" />
-
-                            <circle
-                                class="tds-point"
-                                cx="475"
-                                cy="112"
-                                r="4" />
-
-                            <circle
-                                class="tds-point"
-                                cx="570"
-                                cy="90"
-                                r="4" />
-
-                        </svg>
-
-
-                        <div class="graph-labels">
-
-                            <span>8 AM</span>
-
-                            <span>10 AM</span>
-
-                            <span>12 PM</span>
-
-                            <span>2 PM</span>
-
-                            <span>4 PM</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- PH GRAPH -->
-
-                <div class="water-graph-card">
-
-                    <div class="graph-header">
-
-                        <h3>
-                            pH Level
-                        </h3>
-
-                        <span>
-                            pH
-                        </span>
-
-                    </div>
-
-
-                    <div class="line-chart">
-
-                        <svg
-                            viewBox="0 0 600 200"
-                            preserveAspectRatio="none"
-                            aria-label="pH line graph">
-
-
-                            <!-- GRID -->
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="35"
-                                x2="580"
-                                y2="35" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="75"
-                                x2="580"
-                                y2="75" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="115"
-                                x2="580"
-                                y2="115" />
-
-                            <line
-                                class="graph-grid"
-                                x1="45"
-                                y1="155"
-                                x2="580"
-                                y2="155" />
-
-
-                            <!-- AXES -->
-
-                            <line
-                                class="graph-axis"
-                                x1="45"
-                                y1="20"
-                                x2="45"
-                                y2="165" />
-
-                            <line
-                                class="graph-axis"
-                                x1="45"
-                                y1="165"
-                                x2="580"
-                                y2="165" />
-
-
-                            <!-- LINE -->
-
-                            <polyline
-                                class="ph-line"
-                                points="
-                                    55,105
-                                    160,95
-                                    265,110
-                                    370,90
-                                    475,100
-                                    570,82
-                                " />
-
-
-                            <!-- POINTS -->
-
-                            <circle
-                                class="ph-point"
-                                cx="55"
-                                cy="105"
-                                r="4" />
-
-                            <circle
-                                class="ph-point"
-                                cx="160"
-                                cy="95"
-                                r="4" />
-
-                            <circle
-                                class="ph-point"
-                                cx="265"
-                                cy="110"
-                                r="4" />
-
-                            <circle
-                                class="ph-point"
-                                cx="370"
-                                cy="90"
-                                r="4" />
-
-                            <circle
-                                class="ph-point"
-                                cx="475"
-                                cy="100"
-                                r="4" />
-
-                            <circle
-                                class="ph-point"
-                                cx="570"
-                                cy="82"
-                                r="4" />
-
-                        </svg>
-
-
-                        <div class="graph-labels">
-
-                            <span>8 AM</span>
-
-                            <span>10 AM</span>
-
-                            <span>12 PM</span>
-
-                            <span>2 PM</span>
-
-                            <span>4 PM</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-    <!-- ABOUT PAGE -->
-
-    <main
-        class="about-page page"
-        id="aboutPage">
-
-
-        <section class="about-container">
-
-
-            <!-- BACK BUTTON -->
-
-            <button
-                class="back-btn"
-                id="backToDashboard">
-
-                ← Back to Dashboard
-
+            <button class="expand-btn">
+                ⛶
             </button>
 
+        </div>
 
 
-            <!-- ABOUT TITLE -->
+        <p>Container Load</p>
 
-            <h1>
-                About the Project
-            </h1>
+        <div class="progress-bar">
 
+            <div class="container-load">
+                50%
+            </div>
+
+        </div>
+
+
+        <p>Battery Life</p>
+
+        <div class="progress-bar">
+
+            <div class="battery-life">
+                80%
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         2. LIVE FEED
+    ====================================================== -->
+
+    <section
+        class="card"
+        id="live-feed">
+
+        <div class="card-title">
+
+            <h2>Live Feed</h2>
+
+            <button class="expand-btn">
+                ⛶
+            </button>
+
+        </div>
+
+
+        <div class="camera">
+
+            <button class="play-button">
+                ▶
+            </button>
+
+            <p>USV Camera Feed</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         3. WASTE COMPOSITION
+    ====================================================== -->
+
+    <section
+        class="card"
+        id="waste-report">
+
+        <div class="card-title">
+
+            <h2>Waste Composition</h2>
+
+            <button class="expand-btn">
+                ⛶
+            </button>
+
+        </div>
+
+
+        <div class="reports">
+
+            <div>
+
+                <h3>Daily Report</h3>
+
+                <div class="chart-placeholder">
+                    Daily Chart
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>Monthly Report</h3>
+
+                <div class="chart-placeholder">
+                    Monthly Chart
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <h3>Waste Type</h3>
+
+        <div class="pie-placeholder">
+            Waste Composition
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         4. GPS LOCATION
+    ====================================================== -->
+
+    <section
+        class="card"
+        id="gps-location">
+
+        <div class="card-title">
+
+            <h2>GPS Location</h2>
+
+            <button class="expand-btn">
+                ⛶
+            </button>
+
+        </div>
+
+
+        <div class="map">
+
+            <span>USV LOCATION</span>
+
+        </div>
+
+
+        <div class="coordinates">
 
             <p>
 
-                blah blah blah
+                Latitude:
+
+                <strong>
+                    14.6627° N
+                </strong>
 
             </p>
 
 
+            <p>
 
-            <!-- PURPOSE -->
+                Longitude:
 
-            <div class="about-card">
+                <strong>
+                    120.9567° E
+                </strong>
+
+            </p>
+
+        </div>
+
+    </section>
 
 
-                <h2>
-                    Project Purpose
-                </h2>
+
+    <!-- =====================================================
+         5. WATER QUALITY
+    ====================================================== -->
+
+    <section
+        class="card water-quality"
+        id="water-quality">
 
 
-                <p>
+        <div class="card-title">
 
-                    the system blah blah blah
+            <h2>Water Quality</h2>
 
-                </p>
+            <button class="expand-btn">
+                ⛶
+            </button>
 
+        </div>
+
+
+
+        <!-- CURRENT WATER READINGS -->
+
+        <div class="water-readings">
+
+
+            <div class="water-reading">
+
+                <h3>Water Temperature</h3>
+
+                <div
+                    class="water-value"
+                    id="temperature">
+
+                    28.5 °C
+
+                </div>
+
+            </div>
+
+
+
+            <div class="water-reading">
+
+                <h3>Total Dissolved Solids (TDS)</h3>
+
+                <div
+                    class="water-value"
+                    id="tds">
+
+                    320 ppm
+
+                </div>
 
             </div>
 
 
 
-            <!-- MONITORING FEATURES -->
+            <div class="water-reading">
 
-            <div class="about-card">
+                <h3>pH Level</h3>
+
+                <div
+                    class="water-value"
+                    id="ph">
+
+                    7.2
+
+                </div>
+
+            </div>
+
+        </div>
 
 
-                <h2>
-                    Monitoring Features
-                </h2>
+
+        <!-- WATER QUALITY GRAPHS -->
+
+        <div class="water-graphs">
 
 
-                <p>
+            <!-- TEMPERATURE -->
 
-                    blah blah blah
+            <div class="water-graph-card">
 
-                </p>
+                <div class="graph-header">
 
+                    <h3>Temperature</h3>
+
+                    <span>°C</span>
+
+                </div>
+
+
+                <div class="line-chart">
+
+                    <svg
+                        viewBox="0 0 600 200"
+                        preserveAspectRatio="none">
+
+
+                        <line
+                            class="graph-axis"
+                            x1="55"
+                            y1="20"
+                            x2="55"
+                            y2="175">
+                        </line>
+
+
+                        <line
+                            class="graph-axis"
+                            x1="55"
+                            y1="175"
+                            x2="570"
+                            y2="175">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="40"
+                            x2="570"
+                            y2="40">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="80"
+                            x2="570"
+                            y2="80">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="120"
+                            x2="570"
+                            y2="120">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="160"
+                            x2="570"
+                            y2="160">
+                        </line>
+
+
+                        <polyline
+                            class="temperature-line"
+                            points="
+                                55,125
+                                160,105
+                                265,118
+                                370,82
+                                475,95
+                                570,65">
+                        </polyline>
+
+
+                        <circle
+                            class="temperature-point"
+                            cx="55"
+                            cy="125"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="temperature-point"
+                            cx="160"
+                            cy="105"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="temperature-point"
+                            cx="265"
+                            cy="118"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="temperature-point"
+                            cx="370"
+                            cy="82"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="temperature-point"
+                            cx="475"
+                            cy="95"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="temperature-point"
+                            cx="570"
+                            cy="65"
+                            r="4">
+                        </circle>
+
+                    </svg>
+
+
+                    <div class="graph-labels">
+
+                        <span>8 AM</span>
+                        <span>10 AM</span>
+                        <span>12 PM</span>
+                        <span>2 PM</span>
+                        <span>4 PM</span>
+
+                    </div>
+
+                </div>
 
             </div>
 
 
 
-            <!-- SYSTEM INFORMATION -->
+            <!-- TDS -->
 
-            <div class="about-card">
+            <div class="water-graph-card">
+
+                <div class="graph-header">
+
+                    <h3>TDS</h3>
+
+                    <span>ppm</span>
+
+                </div>
 
 
-                <h2>
-                    System Information
-                </h2>
+                <div class="line-chart">
+
+                    <svg
+                        viewBox="0 0 600 200"
+                        preserveAspectRatio="none">
 
 
-                <p>
+                        <line
+                            class="graph-axis"
+                            x1="55"
+                            y1="20"
+                            x2="55"
+                            y2="175">
+                        </line>
 
-                    blah blah blah blalh
 
-                </p>
+                        <line
+                            class="graph-axis"
+                            x1="55"
+                            y1="175"
+                            x2="570"
+                            y2="175">
+                        </line>
 
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="40"
+                            x2="570"
+                            y2="40">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="80"
+                            x2="570"
+                            y2="80">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="120"
+                            x2="570"
+                            y2="120">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="160"
+                            x2="570"
+                            y2="160">
+                        </line>
+
+
+                        <polyline
+                            class="tds-line"
+                            points="
+                                55,135
+                                160,120
+                                265,130
+                                370,105
+                                475,112
+                                570,90">
+                        </polyline>
+
+
+                        <circle
+                            class="tds-point"
+                            cx="55"
+                            cy="135"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="tds-point"
+                            cx="160"
+                            cy="120"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="tds-point"
+                            cx="265"
+                            cy="130"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="tds-point"
+                            cx="370"
+                            cy="105"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="tds-point"
+                            cx="475"
+                            cy="112"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="tds-point"
+                            cx="570"
+                            cy="90"
+                            r="4">
+                        </circle>
+
+                    </svg>
+
+
+                    <div class="graph-labels">
+
+                        <span>8 AM</span>
+                        <span>10 AM</span>
+                        <span>12 PM</span>
+                        <span>2 PM</span>
+                        <span>4 PM</span>
+
+                    </div>
+
+                </div>
 
             </div>
 
 
-        </section>
+
+            <!-- PH -->
+
+            <div class="water-graph-card">
+
+                <div class="graph-header">
+
+                    <h3>pH Level</h3>
+
+                    <span>pH</span>
+
+                </div>
 
 
-    </main>
+                <div class="line-chart">
+
+                    <svg
+                        viewBox="0 0 600 200"
+                        preserveAspectRatio="none">
 
 
-    <!-- JAVASCRIPT -->
+                        <line
+                            class="graph-axis"
+                            x1="55"
+                            y1="20"
+                            x2="55"
+                            y2="175">
+                        </line>
 
-    <script src="script.js"></script>
 
+                        <line
+                            class="graph-axis"
+                            x1="55"
+                            y1="175"
+                            x2="570"
+                            y2="175">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="40"
+                            x2="570"
+                            y2="40">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="80"
+                            x2="570"
+                            y2="80">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="120"
+                            x2="570"
+                            y2="120">
+                        </line>
+
+
+                        <line
+                            class="graph-grid"
+                            x1="55"
+                            y1="160"
+                            x2="570"
+                            y2="160">
+                        </line>
+
+
+                        <polyline
+                            class="ph-line"
+                            points="
+                                55,105
+                                160,95
+                                265,110
+                                370,90
+                                475,100
+                                570,82">
+                        </polyline>
+
+
+                        <circle
+                            class="ph-point"
+                            cx="55"
+                            cy="105"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="ph-point"
+                            cx="160"
+                            cy="95"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="ph-point"
+                            cx="265"
+                            cy="110"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="ph-point"
+                            cx="370"
+                            cy="90"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="ph-point"
+                            cx="475"
+                            cy="100"
+                            r="4">
+                        </circle>
+
+
+                        <circle
+                            class="ph-point"
+                            cx="570"
+                            cy="82"
+                            r="4">
+                        </circle>
+
+                    </svg>
+
+
+                    <div class="graph-labels">
+
+                        <span>8 AM</span>
+                        <span>10 AM</span>
+                        <span>12 PM</span>
+                        <span>2 PM</span>
+                        <span>4 PM</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     ABOUT PAGE
+========================================================= -->
+
+<section
+    class="page about-page"
+    id="aboutPage">
+
+    <div class="about-container">
+
+        <button
+            class="back-btn"
+            id="backToDashboard">
+
+            ← Back to Dashboard
+
+        </button>
+
+
+        <h1>
+            About the USV Monitoring System
+        </h1>
+
+
+        <p>
+
+            This dashboard is designed to monitor an
+            Unmanned Surface Vehicle operating in Malabon Lake.
+            It provides a simple interface for viewing system
+            status, live camera information, waste composition,
+            GPS location, and water quality data.
+
+        </p>
+
+
+        <div class="about-card">
+
+            <h2>System Purpose</h2>
+
+            <p>
+
+                The system is intended to help monitor the
+                condition and location of the USV while
+                collecting useful environmental information
+                from the lake.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h2>Monitored Information</h2>
+
+            <p>
+
+                The dashboard displays container load,
+                battery life, camera feed status, waste
+                composition, GPS coordinates, water
+                temperature, total dissolved solids,
+                and pH level.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script src="script.js"></script>
 
 </body>
 
