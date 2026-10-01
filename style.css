@@ -1262,30 +1262,129 @@ header {
 
 }
 
-
 @media (max-width: 480px) {
 
     header {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 14px;
+        gap: 10px;
     }
 
     .header-left {
-        width: 100%;
+        width: auto;
+        min-width: 0;
+        gap: 10px;
+    }
+
+    .title {
+        min-width: 0;
+    }
+
+    .title h1 {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .title p {
+        font-size: 10px;
     }
 
     .online-status {
-        margin-left: 50px;
+        margin-left: auto;
+        flex-shrink: 0;
+        font-size: 11px;
+        padding: 7px 9px;
     }
 
     .card {
-        padding: 18px;
+        padding: 16px;
     }
 
     .camera,
     .map {
         height: 230px;
     }
+}
 
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    #waste-report,
+    #water-quality {
+        top: 0;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .dashboard {
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .camera,
+    .map {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .reports,
+    .coordinates {
+        width: 100%;
+    }
+
+    .water-readings,
+    .water-graphs {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        gap: 10px;
+    }
+
+    .card-title h2 {
+        font-size: 18px;
+    }
+
+    .expand-btn {
+        flex-shrink: 0;
+    }
+
+    /* Keep expanded cards inside the phone screen */
+    .card.expanded {
+        width: calc(100vw - 20px) !important;
+        height: calc(100vh - 20px) !important;
+        max-width: none !important;
+        max-height: none !important;
+        padding: 18px;
+        box-sizing: border-box;
+    }
 }
 
 /* =========================================================
