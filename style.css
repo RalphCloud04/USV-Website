@@ -1183,7 +1183,7 @@ header {
         grid-template-areas:
             "system"
             "live"
-            "waste"
+            "waste" 
             "gps"
             "water";
     }

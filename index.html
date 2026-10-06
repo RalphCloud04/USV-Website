@@ -15,6 +15,15 @@
         rel="stylesheet"
         href="style.css">
 
+    <!-- Leaflet Map -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
 </head>
 
 <body>
@@ -265,37 +274,28 @@
         </div>
 
 
-        <div class="map">
-
-            <span>USV LOCATION</span>
-
-        </div>
+        <div id="map" class="map"></div>
 
 
         <div class="coordinates">
 
-            <p>
+        <p>
+            Latitude:
 
-                Latitude:
+            <strong id="latitude">
+                14.6627° N
+            </strong>
+        </p>
 
-                <strong>
-                    14.6627° N
-                </strong>
+        <p>
+            Longitude:
 
-            </p>
+            <strong id="longitude">
+                120.9567° E
+            </strong>
+        </p>
 
-
-            <p>
-
-                Longitude:
-
-                <strong>
-                    120.9567° E
-                </strong>
-
-            </p>
-
-        </div>
+</div>
 
     </section>
 

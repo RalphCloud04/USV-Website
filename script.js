@@ -20,6 +20,98 @@ const pages =
 const backToDashboard =
     document.getElementById("backToDashboard");
 
+    // =========================================================
+// GPS MAP - LEAFLET + OPENSTREETMAP
+// =========================================================
+let usvLatitude = 14.6627;
+let usvLongitude = 120.9567;
+
+
+// CREATE MAP
+
+const gpsMap = L.map("map").setView(
+    [usvLatitude, usvLongitude],
+    16
+);
+
+
+// OPENSTREETMAP
+
+L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+        maxZoom: 19,
+        attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }
+).addTo(gpsMap);
+
+
+// USV MARKER
+
+const usvMarker = L.marker([
+    usvLatitude,
+    usvLongitude
+]).addTo(gpsMap);
+
+usvMarker.bindPopup(
+    "<strong>USV Location</strong>"
+);
+
+
+// UPDATE USV LOCATION
+
+function updateUSVLocation(
+    latitude,
+    longitude
+) {
+
+    usvLatitude = latitude;
+    usvLongitude = longitude;
+
+    // Move marker
+    usvMarker.setLatLng([
+        latitude,
+        longitude
+    ]);
+
+    // Center map
+    gpsMap.setView([
+        latitude,
+        longitude
+    ]);
+
+    // Update latitude
+    const latitudeElement =
+        document.getElementById("latitude");
+
+    // Update longitude
+    const longitudeElement =
+        document.getElementById("longitude");
+
+    if (latitudeElement) {
+        latitudeElement.textContent =
+            `${latitude.toFixed(4)}° N`;
+    }
+
+    if (longitudeElement) {
+        longitudeElement.textContent =
+            `${longitude.toFixed(4)}° E`;
+    }
+}
+
+
+// TEST GPS MOVEMENT
+
+setTimeout(() => {
+
+    updateUSVLocation(
+       14.683476484390635, 120.98829292970997
+    );
+
+},);
+
+
 
 // =========================================================
 // SIDEBAR
