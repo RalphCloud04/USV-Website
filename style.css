@@ -1724,3 +1724,25 @@ body:has(.card.expanded)::before {
         min-height: 200px;
     }
 }
+/* Keep Leaflet zoom controls within the map's stacking layer */
+#gps-location,
+#gps-location #map {
+    position: relative;
+    isolation: isolate;
+}
+
+#gps-location #map {
+    overflow: hidden;
+}
+
+#gps-location #map .leaflet-top,
+#gps-location #map .leaflet-bottom {
+    z-index: 400;
+}
+
+/* Keep the header above the expanded card overlay */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+}
