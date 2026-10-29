@@ -60,7 +60,7 @@
 
         <span class="status-dot"></span>
 
-        <span>System Online</span>
+        <span>Connecting...</span>
 
     </div>
 
@@ -93,6 +93,13 @@
 
         </button>
 
+        <button
+            class="nav-item"
+            data-page="controllerPage">
+
+            Controller
+
+        </button>
 
         <button
             class="nav-item"
@@ -101,6 +108,7 @@
             About
 
         </button>
+
 
     </div>
 
@@ -147,7 +155,7 @@
         <div class="progress-bar">
 
             <div class="container-load">
-                50%
+                Unavailable
             </div>
 
         </div>
@@ -158,7 +166,7 @@
         <div class="progress-bar">
 
             <div class="battery-life">
-                80%
+                Unavailable
             </div>
 
         </div>
@@ -188,11 +196,11 @@
 
         <div class="camera">
 
-            <button class="play-button">
+            <button class="play-button" disabled title="Camera stream not connected">
                 ▶
             </button>
 
-            <p>USV Camera Feed</p>
+            <p>Camera feed not connected</p>
 
         </div>
 
@@ -226,7 +234,7 @@
                 <h3>Daily Report</h3>
 
                 <div class="chart-placeholder">
-                    Daily Chart
+                    Not available
                 </div>
 
             </div>
@@ -237,7 +245,7 @@
                 <h3>Monthly Report</h3>
 
                 <div class="chart-placeholder">
-                    Monthly Chart
+                    Not available
                 </div>
 
             </div>
@@ -248,7 +256,7 @@
         <h3>Waste Type</h3>
 
         <div class="pie-placeholder">
-            Waste Composition
+            Not available
         </div>
 
     </section>
@@ -283,7 +291,7 @@
             Latitude:
 
             <strong id="latitude">
-                14.6627° N
+                Waiting for GPS
             </strong>
         </p>
 
@@ -291,7 +299,7 @@
             Longitude:
 
             <strong id="longitude">
-                120.9567° E
+                Waiting for GPS
             </strong>
         </p>
 
@@ -324,6 +332,7 @@
 
         <!-- CURRENT WATER READINGS -->
 
+        <p id="reading-status" style="margin-bottom:12px;color:#64748b">Waiting for sensor data...</p>
         <div class="water-readings">
 
 
@@ -335,7 +344,7 @@
                     class="water-value"
                     id="temperature">
 
-                    28.5 °C
+                    -- °C
 
                 </div>
 
@@ -351,7 +360,7 @@
                     class="water-value"
                     id="tds">
 
-                    320 ppm
+                    -- ppm
 
                 </div>
 
@@ -367,7 +376,7 @@
                     class="water-value"
                     id="ph">
 
-                    7.2
+                    --
 
                 </div>
 
@@ -842,7 +851,103 @@
 
 </main>
 
+<!-- =========================================================
+     CONTROLLER PAGE
+========================================================= -->
 
+<section
+    class="page controller-page"
+    id="controllerPage">
+
+    <div class="controller-container">
+
+        <h1>Manual Controller</h1>
+
+        <p class="controller-description">
+            Manual control interface for the Unmanned Surface Vehicle.
+        </p>
+
+        <div class="controller-warning">
+            Controller is not connected to the thrusters yet.
+            Controls are disabled until the backend and safety
+            features are implemented.
+        </div>
+
+        <div class="controller-card">
+
+            <h2>Movement Controls</h2>
+
+            <div class="controller-directions">
+
+                <button type="button" disabled>
+                    Forward
+                </button>
+
+                <div class="controller-middle">
+
+                    <button type="button" disabled>
+                        Turn Left
+                    </button>
+
+                    <button
+                        type="button"
+                        class="controller-stop"
+                        disabled>
+                        Stop
+                    </button>
+
+                    <button type="button" disabled>
+                        Turn Right
+                    </button>
+
+                </div>
+
+                <button type="button" disabled>
+                    Reverse
+                </button>
+
+            </div>
+
+            <label for="thrusterSpeed">
+                Thruster Speed
+            </label>
+
+            <input
+                type="range"
+                id="thrusterSpeed"
+                min="0"
+                max="100"
+                value="0"
+                disabled>
+
+            <p>
+                Speed adjustment will be available after the
+                controller backend is implemented.
+            </p>
+
+        </div>
+
+        <div class="controller-card">
+
+            <h2>Operating Mode</h2>
+
+            <div class="controller-mode">
+
+                <button type="button" disabled>
+                    Manual Mode
+                </button>
+
+                <button type="button" disabled>
+                    Autonomous Mode
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- =========================================================
      ABOUT PAGE

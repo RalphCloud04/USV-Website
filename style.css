@@ -1544,3 +1544,183 @@ body:has(.card.expanded)::before {
             #0f172a
         );
 }
+/* Hide simulated visual decorations when sources are unavailable */
+.chart-placeholder::after, .map::before { display:none; }
+.container-load, .battery-life { width:100%; background:#94a3b8; }
+.pie-placeholder { background:#f1f5f9; box-shadow:none; border-radius:12px; height:90px; }
+.graph-labels { display:block; text-align:center; }
+
+
+/* =========================================================
+   CONTROLLER PAGE - ADDITION ONLY
+========================================================= */
+
+.controller-page {
+    display: none;
+    margin-left: 250px;
+    padding: 115px 30px 35px;
+    min-height: 100vh;
+}
+
+.controller-page.active-page {
+    display: block;
+}
+
+.controller-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.controller-container > h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.controller-description {
+    margin-bottom: 24px;
+    color: #64748b;
+}
+
+.controller-warning {
+    margin-bottom: 24px;
+    padding: 16px;
+    border: 1px solid #fcd34d;
+    border-radius: 10px;
+    background: #fffbeb;
+    color: #92400e;
+}
+
+.controller-card {
+    margin-bottom: 22px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.controller-card h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.controller-directions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.controller-middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.controller-directions button,
+.controller-mode button {
+    min-width: 115px;
+    padding: 12px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+}
+
+.controller-directions .controller-stop {
+    border-color: #fecaca;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.controller-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.controller-card input[type="range"] {
+    width: 100%;
+}
+
+.controller-card > p {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.controller-mode {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Controller responsive layout */
+
+@media (max-width: 900px) {
+    .controller-page {
+        margin-left: 0;
+        padding: 100px 20px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .controller-page {
+        padding: 90px 14px 24px;
+    }
+
+    .controller-card {
+        padding: 18px;
+    }
+
+    .controller-middle {
+        gap: 8px;
+    }
+
+    .controller-directions button,
+    .controller-mode button {
+        min-width: 95px;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .controller-mode {
+        flex-direction: column;
+    }
+
+    .controller-mode button {
+        width: 100%;
+    }
+}
+
+/* Expand GPS map to fill the available card space */
+#gps-location.expanded {
+    display: flex;
+    flex-direction: column;
+}
+
+#gps-location.expanded .card-title {
+    flex: 0 0 auto;
+}
+
+#gps-location.expanded #map {
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 250px;
+    width: 100%;
+}
+
+#gps-location.expanded .coordinates {
+    flex: 0 0 auto;
+}
+
+/* Keep the map responsive on smaller screens */
+@media (max-width: 600px) {
+    #gps-location.expanded #map {
+        min-height: 200px;
+    }
+}
